@@ -34,7 +34,7 @@
 
 			<!-- Related demos -->
 			<section class="content">
-		    	<p>Hope you enjoyed this demo<br/><a href="https://www.facebook.com/groups/219597962148508">Vist Asgard</a> </p>
+		    	<p>Hope you enjoy this demo<br/><a href="https://www.facebook.com/groups/219597962148508">Vist Asgard</a> </p>
 			</section>
 		</div><!-- /container -->
 		<script src="js/classie.js"></script>
@@ -103,7 +103,7 @@
 							onEndCallbackFn();
 						}
 					};
-                
+                var counts =0;
                 var points = 0;
                 var sex = 3;
 
@@ -151,12 +151,20 @@
                       }
 					}
                 
+                document.querySelector('.controls').addEventListener(clickeventtype, function() {
+                    counts++;
+                });
+                                                                    
  /*********Q1*********/
                  document.querySelector('.button--reject[data-stack = stack_cinta]').addEventListener(clickeventtype, function() {
+                     if(counts!=0){
+                        points++; 
+                     }
                      if(sex==3){
                          sex=1;  
-                     }           
-                     points++;
+                     }  
+
+                     
                  })
                 
                 document.querySelector('.button--accept[data-stack = stack_cinta]').addEventListener(clickeventtype, function() { 
@@ -165,11 +173,7 @@
                      }     
                 })
                 
-                
-                
-                
-
-                 
+                  
 				// controls the click ring effect on the button
 				var buttonClickCallback = function(bttn) {
 					var bttn = bttn || this;
@@ -182,12 +186,15 @@
                 
  /*********Q2*********/
                  document.querySelector('.controls').addEventListener(clickeventtype, function() {
-                    var stamp = document.getElementsByClassName("fa-male")[0];      
-                     removeClass(stamp, "fa-male");                         
-                     addClass(stamp, "fa-eye-slash"); 
-                     var stamp2 = document.getElementsByClassName("fa-female")[0];      
-                     removeClass(stamp2, "fa-female");                         
-                     addClass(stamp2, "fa-gavel"); 
+//                     changeIcon("fa-male","fa-eye-slash");
+//                     changeIcon("fa-female","fa-gavel");
+//                     forClick("fa-male","fa-eye-slash","fa-female","fa-gavel");
+                         stamp = document.getElementsByClassName("fa-male")[0];      
+                         removeClass(stamp, "fa-male");                         
+                         addClass(stamp, "fa-eye-slash"); 
+                         stamp2 = document.getElementsByClassName("fa-female")[0];      
+                         removeClass(stamp2, "fa-female");                         
+                         addClass(stamp2, "fa-gavel"); 
  /*********Q3*********/ 
                      document.querySelector('.controls').addEventListener(clickeventtype, function() {
                          stamp = document.getElementsByClassName("fa-eye-slash")[0];      
@@ -216,6 +223,18 @@
                         })          
                      })
                  })
+                
+                
+                function forClick(o1,nl,or,nr){
+                     changeIcon(ol,nl);
+                     changeIcon(or,nr);                    
+                }
+                function changeIcon(oldOne,newOne){
+                     var stamp = document.getElementsByClassName(oldOne)[0];      
+                     removeClass(stamp, oldOne);                         
+                     addClass(stamp, newOne); 
+                }
+                
     
                 
                 function hasClass(elements, cName) {  
