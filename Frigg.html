@@ -8,6 +8,11 @@
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<script src="js/modernizr-custom.js"></script>
+		<!-- facebook -->      
+        <meta property="og:image" content="@ViewBag.ShareImg" />       
+        <meta property="og:locale" content="en-US" />  
+        <meta property="og:type"   content="website" />  
+        <meta property="og:url"   content="https://snow1991bloom.github.io/Norse-Gods/Frigg.html" />  
 	</head>
 	<body>
 		<div class="container">
@@ -18,19 +23,24 @@
 			<div class="content">
 		    	<div class="results">
 			    <img src="img/r5.png" alt="Try" />
-                <p>
-				    
+                <p id="results">
+				    You are the only queen of the gods, <br/>
+				    you represent intelligence, love and family.<br/>
+				    You loves you family and  as silent as the grave.<br/> 
+				    Your beauty overwhelmed any creature with wisdom.
 				</p>
 		    	</div>
 
 				<button class="button button--TryAgain" onclick="window.location.href='index.html'"> 
 				 Try again
 				</button>
+                  <br/>
+           		<button class="button fb-share-button button--TryAgain"><a id="fbShare" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsnow1991bloom.github.io%2FNorse-Gods%2FFrigg.html" target="_blank">share</a></button>
             </div>
 
 			<!-- Related demos -->
 			<section class="content">
-		    	<p>Hope you enjoye this demo<br/><a href="https://www.facebook.com/groups/219597962148508">Visit Asgard</a> </p>
+		    	<p>Hope you enjoy this demo<br/><a href="https://www.facebook.com/groups/219597962148508">Visit Asgard</a> </p>
 			</section>
 		</div><!-- /container -->
 		<script src="js/classie.js"></script>
@@ -46,6 +56,7 @@
 			var clickeventtype = mobilecheck() ? 'touchstart' : 'click';
 
 			(function() {
+
 				var support = { animations : Modernizr.cssanimations },
 					animEndEventNames = { 'WebkitAnimation' : 'webkitAnimationEnd', 'OAnimation' : 'oAnimationEnd', 'msAnimation' : 'MSAnimationEnd', 'animation' : 'animationend' },
 					animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ],
