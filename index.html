@@ -15,9 +15,8 @@
 	<body>
 		<div class="container">
 			<header class="codrops-header">
-				<p>Card For Asgard</p>
+				<p>fall in ragnark</p>
 			</header>
-
 			<div class="content color-7">			
 				<ul id="stack_cinta" class="stack stack--cinta">
 					<li class="stack__item"><img src="img/1.png" alt="Tree 1" /></li>
@@ -27,8 +26,8 @@
 					<li class="stack__item"><img src="img/5.png" alt="Tree 5" /></li>
 				</ul>
 				<div class="controls">
-					<button class="button button--sonar button--reject" data-stack="stack_cinta"><i class="fa fa-male"></i><span class="text-hidden">female</span></button>
-					<button class="button button--sonar button--accept" data-stack="stack_cinta"><i class="fa fa-female"></i><span class="text-hidden">Accept</span></button>
+					<button class="button button--sonar button--reject" data-stack="stack_cinta"><i class="fa fa-male"></i><div class="chooseT">Male</div></button>
+					<button class="button button--sonar button--accept" data-stack="stack_cinta"><i class="fa fa-female"></i><div class="chooseT">Female</div></button>
 				</div>
 			</div>
 
@@ -189,7 +188,7 @@
 //                     changeIcon("fa-male","fa-eye-slash");
 //                     changeIcon("fa-female","fa-gavel");
 //                     forClick("fa-male","fa-eye-slash","fa-female","fa-gavel");
-                         stamp = document.getElementsByClassName("fa-male")[0];      
+                        var stamp = document.getElementsByClassName("fa-male")[0];      
                          removeClass(stamp, "fa-male");                         
                          addClass(stamp, "fa-eye-slash"); 
                          stamp2 = document.getElementsByClassName("fa-female")[0];      
@@ -222,6 +221,19 @@
                             })                             
                         })          
                      })
+                 })
+                
+                var cString1=["bear","Yes","Guding","beauty","wait","wait","wait"];
+                var cString2=["banish","No","punishing","happiness","minutes","minutes","minutes"];
+                var bText1 = document.getElementsByClassName("chooseT")[0]; 
+                var bText2 = document.getElementsByClassName("chooseT")[1]; 
+                var nums=0;
+                 document.querySelector('.controls').addEventListener(clickeventtype, function() {
+                         
+                         bText1.innerHTML=cString1[nums];
+                     
+                         bText2.innerHTML=cString2[nums];
+                     nums++;
                  })
                 
                 
