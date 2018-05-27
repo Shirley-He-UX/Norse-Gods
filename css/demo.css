@@ -28,9 +28,11 @@ body {
 button:focus {
 	outline: none;
 }
+
 .button--TryAgain{
     padding: 0.6em 3em;
     font-size: 1.2em;
+    width:72%;
     color:#d69e00;
     text-align: center;
     border-radius: 2em;
@@ -38,6 +40,8 @@ button:focus {
     border: .07em solid #d69e00;
     letter-spacing: .2em;
 }
+
+
 .container {
 	display: -webkit-flex;
 	display: flex;
@@ -59,10 +63,14 @@ button:focus {
 	text-align: center;
 	color: #d69e00;
     font-size: 1.8em;
-    letter-spacing: .2em;
+    letter-spacing: .14em;
 }
 
-
+#fbShare{
+    color: #d69e00;
+    text-decoration: none;
+    padding:2em auto;
+}
 /* Content */
 .content {
 	-webkit-align-self: stretch;
@@ -85,6 +93,13 @@ button:focus {
 	-webkit-flex-direction: column;
 	flex-direction: column;
     font-family: "Norse-Bold", Verdana, Tahoma;
+}
+#results{
+    margin:1.2em; 
+    font-size: 1.2em;
+    line-height: 1.4en;
+    letter-spacing: 0.08em;
+    
 }
 .content p{
     font-size: 0.8em;
