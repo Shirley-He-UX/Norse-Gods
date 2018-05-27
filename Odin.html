@@ -8,6 +8,11 @@
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<script src="js/modernizr-custom.js"></script>
+		<!-- facebook -->      
+        <meta property="og:image" content="@ViewBag.ShareImg" />       
+        <meta property="og:locale" content="en-US" />  
+        <meta property="og:type"   content="website" />  
+        <meta property="og:url"   content="https://snow1991bloom.github.io/Norse-Gods/Odin.html" />  		
 	</head>
 	<body>
 		<div class="container">
@@ -18,14 +23,23 @@
 			<div class="content">
 		    	<div class="results">
 			    <img src="img/r3.png" alt="Try" />
-                <p>
-				    
+                <p id="results">
+				    You are Odin, <br/>
+				    a born leader, <br/>
+				    the king of all gods and the god of knowledges.<br/> 
+				    You are different from other,<br/> 
+				    you know not only justice but also efficiency.<br/> 
+				    Your decisions are usually more useful.<br/> 
+				    You will lead the gods to prepare the Ragnarök <br/> 
+				    and fight Fenrir with your powerful Gungnir.<br/> 				    
 				</p>
 		    	</div>
 
 				<button class="button button--TryAgain" onclick="window.location.href='index.html'"> 
 				 Try again
 				</button>
+                  <br/>
+           		<button class="button fb-share-button button--TryAgain"><a id="fbShare" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsnow1991bloom.github.io%2FNorse-Gods%2FOdin.html" target="_blank">share</a></button>
             </div>
 
 			<!-- Related demos -->
